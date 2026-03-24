@@ -21,6 +21,8 @@ public class AddonTemplate extends MeteorAddon {
     @Override
     public void onInitialize() {
         LOG.info("Initializing Meteor Addon Template");
+        
+        Hud.get().register(EnabledModulesHUD.INFO);
 
         // Modules
         Modules.get().add(new ModuleExample());
